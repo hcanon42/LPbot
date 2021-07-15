@@ -1,18 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const puppeteer = require('puppeteer');
-
-// var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-// function httpGet(theurl)
-// {
-//   var xmlHttp = new XMLHttpRequest();
-//   xmlHttp.open( "GET", theurl, false );
-//   xmlHttp.send( null );
-//   return xmlHttp.responseText;
-// }
-
-// const screenshotTarget = httpGet("https://zeal.gg/wnDrPTx");
+require('dotenv').config({path:"./.env"});
 
 const clipeee = {x: 0, y: 0, width: 810, height: 680}
 client.on("ready", () =>
@@ -38,4 +27,4 @@ client.on("message", msg =>
   }
 })
 
-client.login(process.env.TOKEN);
+client.login(process.env.CLIENT_TOKEN);
