@@ -1,0 +1,27 @@
+{
+  "name": "lpbot",
+  "version": "1.0.0",
+  "description": "bot which shows lps of people",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcanon42/LPbot.git"
+  },
+  "keywords": [
+    "lp"
+  ],
+  "author": "hcanon",
+  "license": "ISC",
+  "dependencies": {
+	  "discord.js":"^12.5.3",
+	  "puppeteer": "5.4.1",
+	  "dotenv": "10.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/hcanon42/LPbot/issues"
+  },
+  "homepage": "https://github.com/hcanon42/LPbot#readme"
+}
