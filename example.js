@@ -31,6 +31,10 @@ client.on("message", msg =>
 		})();
 		//alert(screenshotTarget);
 	}
+	else if ((splitted[0] === "/lp" && splitted.length > 2) || (splitted.length === 2 && splitted[0] === "/lp" && splitted[1] === "help"))
+	{
+		msg.channel.send("Correct Format:\n1.  /lp 									 ---> LP Chart of the gang\n2. /lp [Summoner Name] ---> LP Chart of [Summoner Name]");
+	}
 	else if (splitted[0] === "/lp" && splitted.length === 2)
 	{
 		msg.channel.send(`loading LP chart of \"${splitted[1]}\"`);
@@ -50,10 +54,6 @@ client.on("message", msg =>
 			await msg.channel.send({files:['./screen.jpg']});
 		};
 		ft_singlesummoner(splitted[1]);
-	}
-	else if (splitted[0] === "/lp")
-	{
-		msg.channel.send("Correct Format:\n1.  /lp 									 ---> LP Chart of the gang\n2. /lp [Summoner Name] ---> LP Chart of [Summoner Name]");
 	}
 })
 
