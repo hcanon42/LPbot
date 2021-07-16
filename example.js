@@ -16,14 +16,14 @@ client.on("message", msg =>
 	let splitted = msg.content.split(' ');
 	if (splitted[0] === "/lp" && splitted.length === 1)
 	{
-		msg.channel.send('loading LP chart of the gang...');
+		msg.channel.send('loading LP chart of the gange...');
 		const gang = (async () =>
 		{
 			const browser = await puppeteer.launch({args: ['--no-sandbox']});
 			const page = await browser.newPage();
 			await page.goto('https://zeal.gg/wnDrPTx');
 			await page.waitForTimeout(1000);
-			await page.mouse.click(630, 103);
+			await page.mouse.click(617, 92);
 			await page.waitForTimeout(2000);
 			await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, clip:clipegang});
 			await browser.close();
@@ -37,7 +37,7 @@ client.on("message", msg =>
 	}
 	else if (splitted[0] === "/lp" && splitted.length === 2)
 	{
-		msg.channel.send(`loading LP chart of \"${splitted[1]}\"`);
+		msg.channel.send(`loading LP chart oef \"${splitted[1]}\"`);
 		async function ft_singlesummoner(args)
 		{
 			const browser = await puppeteer.launch({args: ['--no-sandbox']});
@@ -47,7 +47,7 @@ client.on("message", msg =>
 			// await page.$eval('input[name="summoners"]', el => el.value = 'Calport');
 			// await page.click('button[tabindex="-1"]')
 			await page.waitForTimeout(1000);
-			await page.mouse.click(630, 103);
+			await page.mouse.click(615, 92);
 			await page.waitForTimeout(1000);
 			await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, clip:clipsolo});
 			await browser.close();
