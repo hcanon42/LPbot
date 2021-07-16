@@ -19,7 +19,7 @@ client.on("message", msg =>
 		msg.channel.send('loading LP chart of the gang...');
 		const gang = (async () =>
 		{
-			const browser = await puppeteer.launch();
+			const browser = await puppeteer.launch({args: ['--no-sandbox']});
 			const page = await browser.newPage();
 			await page.goto('https://zeal.gg/wnDrPTx');
 			await page.waitForTimeout(1000);
@@ -36,7 +36,7 @@ client.on("message", msg =>
 		msg.channel.send(`loading LP chart of \"${splitted[1]}\"`);
 		async function ft_singlesummoner(args)
 		{
-			const browser = await puppeteer.launch();
+			const browser = await puppeteer.launch({args: ['--no-sandbox']});
 			const page = await browser.newPage();
 			await page.goto(`https://zeal.gg/euw/${args}`);
 			//await page.waitFor('input[name="summoners"]');
