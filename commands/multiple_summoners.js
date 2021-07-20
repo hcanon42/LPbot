@@ -2,7 +2,7 @@ import {createRequire} from "module";
 const require = createRequire(import.meta.url);
 const puppeteer = require('puppeteer');
 
-export async function ft_multiple_summoners(msg)
+export async function ft_multiple_summoners(msg, argumentss)
 {
 	let i = 0;
 	let str = '';
@@ -15,8 +15,8 @@ export async function ft_multiple_summoners(msg)
 		await page.goto('https://zeal.gg');
 		await page.waitForTimeout(1000);
 		await page.select('select[tabindex="2"]', "euw");
-		while (++i < arguments.length)
-			str = str.concat(arguments[i] + ((i === arguments.length - 1) ? '' : ', '));
+		while (++i < argumentss.length)
+			str = str.concat(argumentss[i] + ((i === argumentss.length - 1) ? '' : ', '));
 		await page.focus('input[name="summoners"]');
 		await page.keyboard.type(str);
 		await page.click('button[tabindex="-1"]');
