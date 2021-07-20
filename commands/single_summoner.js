@@ -11,7 +11,7 @@ export async function ft_single_summoner(msg, arg)
 
 	try
 	{
-		page.setDefaultNavigationTimeout(2000);
+		page.setDefaultNavigationTimeout(10000);
 		await page.goto(`https://zeal.gg/euw/${arg}`);
 		await page.waitForTimeout(1300);
 		await page.mouse.click(615, 92);

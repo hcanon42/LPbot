@@ -11,7 +11,7 @@ export async function ft_gang(msg)
 
 	try
 	{
-		page.setDefaultNavigationTimeout(2000);
+		page.setDefaultNavigationTimeout(10000);
 		await page.goto('https://zeal.gg/wnDrPTx');
 		await page.waitForTimeout(1500);
 		await page.mouse.click(617, 92);

@@ -11,7 +11,7 @@ export async function ft_multiple_summoners(msg, argumentss)
 
 	try
 	{
-		page.setDefaultNavigationTimeout(2000);
+		page.setDefaultNavigationTimeout(10000);
 		await page.goto('https://zeal.gg');
 		await page.waitForTimeout(1000);
 		await page.select('select[tabindex="2"]', "euw");
