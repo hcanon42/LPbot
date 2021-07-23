@@ -20,7 +20,7 @@ export async function ft_multiple_summoners(msg, argumentss)
 		await page.focus('input[name="summoners"]');
 		await page.keyboard.type(str);
 		await page.click('button[tabindex="-1"]');
-		await page.waitForTimeout(3300);
+		await page.waitForTimeout(3500);
 		await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, fullPage: true});
 		await browser.close();
 		await msg.channel.send({files:['./screen.jpg']});

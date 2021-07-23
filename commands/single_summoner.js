@@ -15,7 +15,7 @@ export async function ft_single_summoner(msg, arg)
 		await page.goto(`https://zeal.gg/euw/${arg}`);
 		await page.waitForTimeout(1300);
 		await page.mouse.click(615, 92);
-		await page.waitForTimeout(2500);
+		await page.waitForTimeout(3500);
 		await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, fullPage:true});
 		await browser.close();
 		await msg.channel.send({files:['./screen.jpg']});

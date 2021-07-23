@@ -4,22 +4,20 @@ const Discord = require("discord.js");
 // const WOKCommands = require('wokcommands');
 const puppeteer = require('puppeteer');
 require('dotenv').config({path:"./.env"});
+// const gang = require('./commands/gang');
+// const single = require('./commands/single_summoner');
+// const multiple = require('./commands/multiple_summoners')
 import {ft_single_summoner} from "./commands/single_summoner.js"
 import {ft_multiple_summoners} from "./commands/multiple_summoners.js"
 import {ft_gang} from "./commands/gang.js"
 
-// const guild_id = process.env.GUILD_ID;
+const guild_id = process.env.GUILD_ID;
 const client = new Discord.Client();
 
 // On ready event
 client.on("ready", () =>
 {
 	console.log(`Logged in as ${client.user.tag}!`)
-	// new WOKCommands (client, {
-	// 	commandsDir: 'commands',
-	// 	testServers: [guild_id],
-	// 	showWarns: false
-	// })
 });
 
 // On message event

@@ -15,7 +15,7 @@ export async function ft_gang(msg)
 		await page.goto('https://zeal.gg/wnDrPTx');
 		await page.waitForTimeout(1500);
 		await page.mouse.click(617, 92);
-		await page.waitForTimeout(2350);
+		await page.waitForTimeout(3500);
 		await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, fullPage: true});
 		await browser.close();
 		await msg.channel.send({files:['./screen.jpg']});
