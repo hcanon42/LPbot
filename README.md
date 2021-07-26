@@ -21,7 +21,7 @@ Shows a graph that represents the evolution the LPs of a League player during th
 
 ## Installation
 
-To install the bot on your server, just enter the URL : https://discord.com/oauth2/authorize?client_id=864142815805833236&permissions=2048&scope=bot\
+To install the bot on your server, just enter the URL : https://discord.com/oauth2/authorize?client_id=864142815805833236&permissions=2048&scope=bot  
 And you just have to choose the server you want to put it into !\
 (Don't forget that you need authorization to put a bot on your server)
 
