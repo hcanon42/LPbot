@@ -14,6 +14,19 @@ import {ft_gang} from "./commands/gang.js"
 const guild_id = process.env.GUILD_ID;
 const client = new Discord.Client();
 
+function parsing(line)
+{
+	line = line.replace(/\\ /g, "\\space_detected");
+	let splitted = line.split(' ');
+
+	for (let j = 0; j < splitted.length; j++)
+	{
+		splitted[j] = splitted[j].replace(/\\space_detected/g, ' ')
+		splitted[j] = splitted[j].replace(/\\/g, '')
+	}
+	return (splitted);
+}
+
 // On ready event
 client.on("ready", () =>
 {
@@ -23,7 +36,7 @@ client.on("ready", () =>
 // On message event
 client.on("message", msg =>
 {
-	let splitted = msg.content.split(' ');
+	let splitted = parsing(msg.content);
 	
 	// /lp
 	if (splitted[0] === "/lp" && splitted.length === 1)
