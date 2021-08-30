@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 
 const clipegang = {x: 0, y: 0, width: 810, height: 700}
 
-export async function ft_gang(msg)
+export async function ft_gang(channel)
 {
 	const browser = await puppeteer.launch({args: ['--no-sandbox']});
 	const page = await browser.newPage();
