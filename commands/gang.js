@@ -12,13 +12,13 @@ export async function ft_gang(msg)
 	try
 	{
 		page.setDefaultNavigationTimeout(10000);
-		await page.goto('https://zeal.gg/wnDrPTx');
+		await page.goto('https://zeal.gg/HkPbJ_5');
 		await page.waitForTimeout(1500);
 		await page.mouse.click(617, 92);
 		await page.waitForTimeout(3500);
 		await page.screenshot({ type: "jpeg", path: 'screen.jpg', quality: 100, fullPage: true});
 		await browser.close();
-		await msg.channel.send({files:['./screen.jpg']});
+		await channel.send({files:['./screen.jpg']});
 	}
 	catch (error)
 	{

@@ -1,15 +1,14 @@
 import {createRequire} from "module";
 const require = createRequire(import.meta.url);
 const Discord = require("discord.js");
-// const WOKCommands = require('wokcommands');
 const puppeteer = require('puppeteer');
+const cron = require("cron")
 require('dotenv').config({path:"./.env"});
-// const gang = require('./commands/gang');
-// const single = require('./commands/single_summoner');
-// const multiple = require('./commands/multiple_summoners')
+
 import {ft_single_summoner} from "./commands/single_summoner.js"
 import {ft_multiple_summoners} from "./commands/multiple_summoners.js"
 import {ft_gang} from "./commands/gang.js"
+
 
 const guild_id = process.env.GUILD_ID;
 const client = new Discord.Client();
@@ -30,8 +29,16 @@ function parsing(line)
 // On ready event
 client.on("ready", () =>
 {
+	const text_channel = client.channels.cache.find(channel => channel.name === "bot");
+
 	console.log(`Logged in as ${client.user.tag}!`)
-});
+
+	let scheduledlp = new cron.CronJob("00 00 18 * * *", () =>
+	{
+		text_channel.send('loading LP chart of the gang...');
+		ft_gang(text_channel);
+	})
+	scheduledlp.start()});
 
 // On message event
 client.on("message", msg =>
@@ -42,7 +49,7 @@ client.on("message", msg =>
 	if (splitted[0] === "/lp" && splitted.length === 1)
 	{
 		msg.channel.send('loading LP chart of the gang...');
-		ft_gang(msg);
+		ft_gang(msg.channel);
 	}
 	
 	// /lp help
