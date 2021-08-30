@@ -19,7 +19,8 @@
   "dependencies": {
 	  "discord.js":"^12.5.3",
 	  "puppeteer": "5.4.1",
-	  "dotenv": "10.0.0"
+	  "dotenv": "10.0.0",
+	  "cron": "1.8.2"
   },
   "bugs": {
     "url": "https://github.com/hcanon42/LPbot/issues"
