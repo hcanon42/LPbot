@@ -4,7 +4,7 @@
   "description": "bot which shows lps of people",
   "main": "example.js",
   "scripts": {
-	  "start": "node ./example.js",
+    "start": "node ./example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +17,10 @@
   "author": "hcanon",
   "license": "ISC",
   "dependencies": {
-	  "discord.js":"^12.5.3",
-	  "puppeteer": "5.4.1",
-	  "dotenv": "10.0.0",
-	  "cron": "1.8.2"
+    "cron": "1.8.2",
+    "discord.js": "^12.5.3",
+    "dotenv": "10.0.0",
+    "puppeteer": "^5.4.1"
   },
   "bugs": {
     "url": "https://github.com/hcanon42/LPbot/issues"

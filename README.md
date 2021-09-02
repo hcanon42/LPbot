@@ -29,8 +29,10 @@ And you just have to choose the server you want to put it into !\
 
 ```
 /lp
+/lpmax
 /lp [SummonerName]
 /lp [SummonerName] [SummonerName] [SummonerName]...
+/lpmax [SummonerName] [SummonerName]...
 /lp help
 ```
 ## Contributing
